@@ -2,12 +2,3 @@
 name = "langtons_ant"
 version = "0.1.0"
 edition = "2024"
-
-default-run="langtons_ant"
-
-[dependencies]
-ctrlc = "3.4.6"
-
-[[bin]]
-name="rev"
-path="./src/rev.rs"

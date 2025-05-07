@@ -113,9 +113,6 @@ fn display(mem: &Mem) {
 fn main() {
     let mut running = Arc::new(AtomicBool::new(true));
     let mut r = running.clone();
-    ctrlc::set_handler(move || {
-        r.store(false, std::sync::atomic::Ordering::SeqCst);
-    });
     println!("\x1b[2J");
     let mut mem = Mem::new([
         # unkown starting state
